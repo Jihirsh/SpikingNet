@@ -1,4 +1,3 @@
-import React from "react";
 // import About from "@/components/About";
 // import Features from "@/components/Features";
 // import Connectivity from "@/components/Connectivity";
