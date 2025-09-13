@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ArrowRight, Home, Wifi, Smartphone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -60,7 +60,7 @@ const Hero = () => {
         {/* Icons with enhanced animations */}
         <div className="flex justify-center mb-8">
           <div className="flex items-center space-x-6">
-            <div className="relative">
+            <div className="relative hidden md:block">
               <Home className="w-16 h-16 text-sky-500 animate-bounce" />
               <Wifi className="w-6 h-6 text-cyan-400 absolute -top-2 -right-2 animate-pulse" />
             </div>
@@ -73,8 +73,8 @@ const Hero = () => {
 
         <h1 className="text-6xl md:text-8xl font-extrabold mb-8 leading-tight">
           <span className="block text-gray-800 mb-2">You Live</span>
-          <span className="block gradient-text animate-glow text-6xl md:text-8xl">
-            We Automate
+          <span className="relative inline-block px-6 sm:px-8 md:px-28 rounded-lg animate-box-glow mx-auto">
+            <span className="gradient-text">We Automate</span>
           </span>
         </h1>
 
@@ -141,8 +141,8 @@ const Hero = () => {
 
       {/* Enhanced scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="w-8 h-12 border-2 border-sky-300 rounded-full flex justify-center glass-effect">
-          <div className="w-2 h-4 bg-gradient-to-b from-sky-500 to-cyan-500 rounded-full animate-bounce mt-2"></div>
+        <div className="w-8 h-8 border-2 border-sky-300 rounded-full flex justify-center glass-effect">
+          <div className="w-2 h-4 bg-gradient-to-b from-sky-500 to-cyan-500 rounded-full animate-bounce mt-2 hidden md:block"></div>
         </div>
       </div>
     </section>
